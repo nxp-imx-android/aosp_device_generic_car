@@ -15,12 +15,12 @@
 #
 
 # Auto modules
+# TODO: Add broadcastradio@.2.0 back once it's stable b/145694104
 PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-service \
     android.hardware.automotive.audiocontrol@1.0-service \
-    android.hardware.bluetooth@1.0-service.sim \
+    android.hardware.bluetooth@1.1-service.sim \
     android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.broadcastradio@2.0-service
 
 # Emulator configuration
 PRODUCT_COPY_FILES += \
@@ -60,9 +60,7 @@ PRODUCT_COPY_FILES += \
     device/generic/goldfish/data/etc/apns-conf.xml:system/etc/apns-conf.xml \
     device/sample/etc/old-apns-conf.xml:system/etc/old-apns-conf.xml
 
-# Vendor Interface Manifest
-PRODUCT_COPY_FILES += \
-    device/generic/car/common/manifest.xml:$(TARGET_COPY_OUT_VENDOR)/manifest.xml
+DEVICE_MANIFEST_FILE := device/generic/car/common/manifest.xml
 
 # Car emulator specific sepolicy
 BOARD_SEPOLICY_DIRS += \

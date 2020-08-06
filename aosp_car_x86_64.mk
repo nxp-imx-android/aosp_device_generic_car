@@ -23,3 +23,4 @@ PRODUCT_NAME := aosp_car_x86_64
 PRODUCT_DEVICE := generic_x86_64
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Car on x86_64 emulator
+-include development/build/product_sdk.mk
